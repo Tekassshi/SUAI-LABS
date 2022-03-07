@@ -1,0 +1,4 @@
+﻿  Lab1.cpp
+C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_Labs\Lab1\Lab1.cpp(9,13): warning C4101: 'a2': unreferenced local variable
+  LINK : C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\Debug\Lab1.exe not found or not built by the last incremental link; performing full link
+  Lab1.vcxproj -> C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\Debug\Lab1.exe

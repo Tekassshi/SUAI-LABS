@@ -1,0 +1,9 @@
+﻿  Lab6.cpp
+C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\Lab6\Lab6.cpp(16,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\Lab6\Lab6.cpp(75,9): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\Lab6\Lab6.cpp(75,26): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  compress.cpp
+C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\Lab6\compress.cpp(9,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  sum.cpp
+  Создание кода...
+  Lab6.vcxproj -> C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\x64\Debug\Lab6.exe
