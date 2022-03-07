@@ -2,5 +2,5 @@
 
 int main() {
 	setlocale(LC_ALL, "rus");
-	std::cout << "ЧЕГО БЛЯТЬ???";
+	std::cout << "Да ничего блять!"
 }
