@@ -13,8 +13,15 @@
 // Основной код
 
 #include <iostream>
+#include "functions.h"
 
 int main() {
+
+	// переменные указатели для функции exceptions
+	bool f1 = 0;
+	bool f2 = 0;
+	bool* fpointer1 = &f1;
+	bool* fpointer2 = &f2;
 
 	setlocale(LC_ALL, "rus");
 
@@ -38,36 +45,23 @@ int main() {
 	std::cout << "Введите необходимую длину строки: ";
 	std::cin >> expsize;
 
+	if (expsize < 0) {
+		std::cout << "Длина строки не может быть отрицательной!\n";
+		return 0;
+	}
+
 	expsize += 1; // Дополнительное пространство для нуль-терминатора
 
-	//Ссылка на конечный массив
+	// Ссылка на конечный массив
 	char* outstring = new char[expsize];
 
-	if (strlen(str) != size-1) {
-		std::cout << std::endl;
-		std::cout << "Введённая строка не соответствует заданному размеру!";
-		std::cout << std::endl;
-		delete[] str;
-		delete[] outstring;
-		return 0;
-	}
-	else if (expsize == size) {
-		std::cout << std::endl;
-		std::cout << "В вашей строке уже достаточно символов!";
-		std::cout << std::endl;
-		delete[] str;
-		delete[] outstring;
-		return 0;
-	}
+	exceptions(fpointer1, fpointer2, str, outstring, size, expsize);
 
-	// Определеяем количество пробелов в слове
-	for (i = 0; i < size; i++) {
-		if (str[i] == ' ') {
-			spaces += 1;
-		}
-	}
+	// Если введённые данные не прошли проверку, то завершаем программу
+	if (*fpointer1 == 1 || *fpointer2 == 1)
+		return 0;
 
-	words = spaces + 1;     // Количество слов
+	count(str, size, &spaces, &words);
 
 	std::cout << std::endl;
 

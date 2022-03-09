@@ -25,6 +25,12 @@
 	bool check = 1;
 	
 	std::cout << "Введите длину массива: "; std::cin >> n;
+
+	if (n < 0) {
+		std::cout << "Длина массива не может быть отрицательной, повторите ввод \n";
+		return 0;
+	}
+
 	std::cout << "Вводите элементы массива по порядку: \n";
 
 	double * array = new double[n];
@@ -33,7 +39,6 @@
 	for (i = 0; i < n; i++)
 	{
 		std::cin >> array[i];
-		/*array[i] = num;*/
 	}
 
 	std::cout << std::endl;
