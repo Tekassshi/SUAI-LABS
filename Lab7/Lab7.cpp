@@ -27,12 +27,12 @@ int main() {
 	size += 1; // Дополнительное пространство для нуль-терминатора
 
 	// Ссылка на массив слов
-	char* string = new char[size];
+	char* str = new char[size];
 
 	std::cout << "Введите строку: ";
 	std::cin.get(); // Добавляем, чтобы сработал метод getline (из за остаточного \n)
 
-	std::cin.getline(string, size);
+	std::cin.getline(str, size);
 	std::cout << std::endl;
 
 	std::cout << "Введите необходимую длину строки: ";
@@ -43,11 +43,11 @@ int main() {
 	//Ссылка на конечный массив
 	char* outstring = new char[expsize];
 
-	if (strlen(string) != size-1) {
+	if (strlen(str) != size-1) {
 		std::cout << std::endl;
 		std::cout << "Введённая строка не соответствует заданному размеру!";
 		std::cout << std::endl;
-		delete[] string;
+		delete[] str;
 		delete[] outstring;
 		return 0;
 	}
@@ -55,19 +55,19 @@ int main() {
 		std::cout << std::endl;
 		std::cout << "В вашей строке уже достаточно символов!";
 		std::cout << std::endl;
-		delete[] string;
+		delete[] str;
 		delete[] outstring;
 		return 0;
 	}
 
 	// Определеяем количество пробелов в слове
 	for (i = 0; i < size; i++) {
-		if (string[i] == ' ') {
+		if (str[i] == ' ') {
 			spaces += 1;
 		}
 	}
 
-	words = spaces + 1;
+	words = spaces + 1;     // Количество слов
 
 	std::cout << std::endl;
 
@@ -77,10 +77,10 @@ int main() {
 
 	// k - счётчик для нового массива
 	for (i = 0; i < size; i++) {
-		outstring[k] = string[i];
+		outstring[k] = str[i];
 		k += 1;
 
-		if (string[i] == ' ') {
+		if (str[i] == ' ') {
 			for (j = 0; j < mid; j++) {
 				outstring[k] = ' ';
 				k += 1;
@@ -107,7 +107,7 @@ int main() {
 	std::cout << strlen(outstring);
 	std::cout << std::endl;
 
-	delete[] string;
+	delete[] str;
 	delete[] outstring;
 
 	// Для обнаружения утечек памяти

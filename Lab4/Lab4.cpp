@@ -65,7 +65,7 @@ int main()
 
 	bool f = 0;
 
-	double eps = pow(10, -4);
+	double eps = dx/2;
 
 	for (i = xstart; i <= xend + eps; i += dx)
 	{
