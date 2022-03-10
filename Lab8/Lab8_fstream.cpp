@@ -3,19 +3,26 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "functions.h"
 
 int main() {
 	setlocale(LC_ALL, "rus");
 
 	bool fw = 0; // flag word (Показатель того, что текущее предложение начинается с тире)
 	int i, k, j, l;
-	std::string word, s, s1, s2;
+	std::string word;
+
+	char symbarr[] = { '.', '!', '?'};
 
 	std::ifstream in;
 	std::ofstream out;
 	
 	in.open("input.txt");
 	out.open("output.txt");
+
+	if (!fisopen(&in, &out)) {
+		return 0;
+	}
 
 	/*
 	Проверяем строку на заданный шаблон, если предложение начинается с тире, 
@@ -34,7 +41,7 @@ int main() {
 			out << word << " ";
 		}
 
-		if (word[l-1] == '.' || word[l - 1] == '?' || word[l - 1] == '!') {
+		if (iscontains(symbarr, word[l-1])) {
 			fw = 0;
 		}
 	}
@@ -44,6 +51,3 @@ int main() {
 
 	return 0;
 }
-
-// Добавить массив символов окончания предложения
-// Создать функцию с указателем на файл
