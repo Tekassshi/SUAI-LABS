@@ -1,2 +1,5 @@
 ﻿  Lab8_cstdio.cpp
+C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\Lab8_cstdio\functions.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  iscontains.cpp
+  Создание кода...
   Lab8_cstdio.vcxproj -> C:\Users\geeks\OneDrive\Рабочий стол\C++ Scripts\SUAI_LABS_WITH_DASHA\x64\Debug\Lab8_cstdio.exe
