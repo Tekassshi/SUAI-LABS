@@ -21,16 +21,7 @@
 int main() {
 	setlocale(LC_ALL, "rus");
 
-	// fs - flag symbol  (Показательтого, что мы записываем новое предложение)
-	// fe - flag end     (Флаг переноса спец. символа на следующую строку)
-
-	bool fs = 0, fe = 0;
-
-	char symb;
-
 	char symbarr[] = {'.', '!', '?', '\n'};
-
-	int k = 0;
 	
 	FILE* input_file = NULL;
 	FILE* output_file = NULL;
@@ -47,29 +38,7 @@ int main() {
 	то мы записываем в файл output.txt
 	*/
 
-	while ((symb = fgetc(input_file)) != EOF) {
-
-		if (iscontains(symbarr, symb) && fs == 1) {
-			fe = 1;
-		}
-
-		if (symb == '-') {
-			fs = 1;
-		}
-
-		if (fs == 1 && fe == 0) {
-			fputc(symb, output_file);
-		}
-		else if ((fs == 1 && fe == 1) || (symb == '\n')) {
-			fputc(symb, output_file);
-			if (symb != '\n') {
-				fputc(' ', output_file);
-			}
-			fe = 0;
-			fs = 0;
-		}
-
-	}
+	filter(input_file, output_file, symbarr);
 
 	fclose(input_file);
 	fclose(output_file);

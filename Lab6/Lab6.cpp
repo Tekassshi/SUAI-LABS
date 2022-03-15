@@ -13,10 +13,10 @@
 // Основной код
 
 #include <iostream>
-#include "functions.h";
+#include "functions.h"
 
 int main() {
-
+	
 	setlocale(LC_ALL, "rus");
 
 	int k, i, m, n;

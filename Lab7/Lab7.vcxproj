@@ -141,7 +141,8 @@
   <ItemGroup>
     <ClCompile Include="count.cpp" />
     <ClCompile Include="Lab7.cpp" />
-    <ClCompile Include="exceptions.cpp" />
+    <ClCompile Include="exccehck.cpp" />
+    <ClCompile Include="transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Test input.txt" />

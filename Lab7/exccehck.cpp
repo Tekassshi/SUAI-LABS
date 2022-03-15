@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-void exceptions(bool* fpointer1, bool* fpointer2, char* str, char* outstring, int size, int expsize) {
+void exccehck(bool* fpointer1, bool* fpointer2, char* str, char* outstring, int size, int expsize) {
 	if (strlen(str) != (size - 1)) {
 		std::cout << std::endl;
 		std::cout << "¬ведЄнна€ строка не соответствует заданному размеру!";

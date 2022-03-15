@@ -1,17 +1,32 @@
 ﻿#include <iostream>
 
-int check(int r)
+int check(bool b)
 {
 	int a;
-	std::cin >> a;
-
-	while ((a > r) || (a < 0))
+	while (true)
 	{
-		std::cout << "Введеный операнд не помещается в разрядную сетку, повторите ввод. " << std::endl << "Введите число меньшее " << r << std::endl;
 		std::cin >> a;
+		if (b)
+		{
+			if (a == 1 || a == 0)
+			{
+				return a;
+			}
+			else
+			{
+				std::cout << "Введеный операнд не помещается в разрядную сетку, повторите ввод.\n";
+			}
+		}
+		else if (a > 0x7)
+		{
+			std::cout << "Введеный операнд не помещается в разрядную сетку, повторите ввод.\n";
+		}
+		else
+		{
+			std::cout << "\n";
+			return a;
+		}
 	}
-
-	return a;
 }
 
 int main()
@@ -19,12 +34,12 @@ int main()
 	setlocale(LC_ALL, "rus");
 
 	unsigned short res = 0;
-	unsigned int a, b, d;
+	int a, b, d;
 
 	std::cout << "Введите первый операнд: ";
-	a = check(0x7);
+	a = check(0);
 	std::cout << "Введите второй операнд: ";
-	b = check(0x7);
+	b = check(0);
 	std::cout << "Введите тип операндов (0 - байты, 1 - слова): ";
 	d = check(1);
 

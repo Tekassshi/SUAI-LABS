@@ -2,7 +2,7 @@
 #define FUNCTIONS
 #include <cstdio>;
 
-bool iscontains(char symbarr[], char symb);
-bool fisopen(FILE* input_file, FILE* output_file);
+double sum(double** array, int m, int n, bool b);
+void compress(double** array, int m, int n, double** newarray, int m1, int n1);
 
 #endif

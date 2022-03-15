@@ -1,6 +1,6 @@
 //функция добавления элемента в конец массива;
 
-void add(double* array, double a, int& arrsize)
+void add(double*& array, double a, int& arrsize)
 {
 	int i;
 	double* temp = new double[*&arrsize + 1];
@@ -17,8 +17,8 @@ void add(double* array, double a, int& arrsize)
 		}
 	}
 
-	delete[] array;
+	delete[] * &array;
 
-	array = temp;
+	*&array = temp;
 	*&arrsize += 1;
 }

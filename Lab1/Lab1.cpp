@@ -26,5 +26,3 @@ int main()
 	printf("z1 = %.10lf \n", z1);
 	printf("z2 = %.10lf", z2);
 }
-
-

@@ -23,7 +23,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8_fstream", "Lab8\Lab8.v
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab8_cstdio", "Lab8_cstdio\Lab8_cstdio.vcxproj", "{2887918F-4AE3-42C1-8CF2-ABE749B0700A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E033AF83-5B96-438A-A701-6371D03D7DF8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B3DCC02-BFF3-4563-9B37-EDE433CDD991}"
 	ProjectSection(SolutionItems) = preProject
 		final_version_changes.txt = final_version_changes.txt
 	EndProjectSection

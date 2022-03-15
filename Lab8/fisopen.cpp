@@ -13,7 +13,7 @@ bool fisopen(std::ifstream* in, std::ofstream* out) {
 		f = 0;
 	}
 	if (!(*out).is_open()) {
-		std::cout << "Файл для чтения не найден!" << std::endl;
+		std::cout << "Файл для записи не найден!" << std::endl;
 		f = 0;
 	}
 

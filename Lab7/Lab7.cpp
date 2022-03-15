@@ -55,7 +55,7 @@ int main() {
 	// Ссылка на конечный массив
 	char* outstring = new char[expsize];
 
-	exceptions(fpointer1, fpointer2, str, outstring, size, expsize);
+	exccehck(fpointer1, fpointer2, str, outstring, size, expsize);
 
 	// Если введённые данные не прошли проверку, то завершаем программу
 	if (*fpointer1 == 1 || *fpointer2 == 1)
@@ -65,34 +65,7 @@ int main() {
 
 	std::cout << std::endl;
 
-	plus = expsize - size;  // Количество пробелов, которые нужно добавить
-	mid = plus / spaces;    // Среднее кол-во пробелов, которое необходимо добавить
-	ost = plus % spaces;    // Остаточное кол-во пробелов, которые добавляем в конец
-
-	// k - счётчик для нового массива
-	for (i = 0; i < size; i++) {
-		outstring[k] = str[i];
-		k += 1;
-
-		if (str[i] == ' ') {
-			for (j = 0; j < mid; j++) {
-				outstring[k] = ' ';
-				k += 1;
-			}
-		}
-	}
-
-	// Заполняем остатки пробелов начиная с нуль-терминатора
-	k -= 1;
-
-	for (j = 0; j < ost; j++) {
-		outstring[k] = ' ';
-		std::cout << outstring[k];
-		k += 1;
-	}
-
-	// Устанавливаем новый нуль-терминатор
-	outstring[expsize-1] = '\0';
+	transform(str, outstring, size, expsize, spaces);
 
 	std::cout << std::endl;
 	std::cout << "'" << outstring << "'";

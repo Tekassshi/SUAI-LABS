@@ -8,10 +8,6 @@
 int main() {
 	setlocale(LC_ALL, "rus");
 
-	bool fw = 0; // flag word (Показатель того, что текущее предложение начинается с тире)
-	int i, k, j, l;
-	std::string word;
-
 	char symbarr[] = { '.', '!', '?'};
 
 	std::ifstream in;
@@ -29,22 +25,7 @@ int main() {
 	то мы записываем в файл output.txt
 	*/
 
-	while (!in.eof()) {
-		in >> word;
-		l = word.length();
-
-		if (word[0] == '-') {
-			fw = 1;
-		}
-
-		if (fw == 1) {
-			out << word << " ";
-		}
-
-		if (iscontains(symbarr, word[l-1])) {
-			fw = 0;
-		}
-	}
+	filter(&in, &out, symbarr);
 
 	in.close();
 	out.close();

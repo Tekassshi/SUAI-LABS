@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="filter.cpp" />
     <ClCompile Include="fisopen.cpp" />
     <ClCompile Include="iscontains.cpp" />
     <ClCompile Include="Lab8_cstdio.cpp" />

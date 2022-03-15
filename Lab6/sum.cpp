@@ -1,4 +1,4 @@
-// Cумма цифр строки/столбца (bool b: 1 - строка, 0 - столбец)
+// CпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (bool b: 1 - пїЅпїЅпїЅпїЅпїЅпїЅ, 0 - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 double sum(double** array, int m, int n, bool b) {
 	int i;
 	double sum = 0;
@@ -13,6 +13,5 @@ double sum(double** array, int m, int n, bool b) {
 			sum += array[i][n];
 		}
 	}
-
 	return sum;
 }

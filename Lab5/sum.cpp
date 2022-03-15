@@ -1,11 +1,11 @@
 #include <cmath>;
 
-double sum(double array[], int arrsize, bool& check)
+double sum(double*& array, int& arrsize)
 {
 	double sum = 0;
 	int i, f = 0;
 
-	for (i = 0; i < arrsize; i++)
+	for (i = 0; i < *&arrsize; i++)
 	{
 		if (f == 1)
 		{
@@ -18,9 +18,6 @@ double sum(double array[], int arrsize, bool& check)
 		}
 
 	}
-	if (sum == 0) {
-		check = 0;
-	}
-	
+
 	return sum;
 }
